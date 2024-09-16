@@ -36,27 +36,58 @@
             font-size: 18px;
         }
 
-        /* CSS for the second container */
+        /* Style for "Learn More" button in the first container */
+        .learn-more {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 15px;
+            background-color: #0171ba;
+            color: white;
+            text-decoration: none;
+            border: 2px solid white;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .learn-more:hover {
+            background-color: white;
+            color: #0171ba;
+        }
+
+        /* CSS for the second container (container-alt) */
         .container-alt {
             display: flex;
             justify-content: space-between;
-            background-color: transparent; /* No background color */
+            background-color: transparent;
             padding: 20px;
             font-family: 'Roboto', sans-serif;
         }
 
         .container-alt h2 {
-            color: black; /* Black font color for titles */
+            color: black;
             font-size: 22px;
             margin-bottom: 10px;
         }
 
         .container-alt li {
-            color: black; /* Black font color for bullet points */
+            color: black;
             font-size: 18px;
         }
+
+        /* Style for "Learn More" button in the second container */
+        .container-alt .learn-more {
+            background-color: white;
+            color: #0171ba;
+            border: 2px solid #0171ba;
+        }
+
+        .container-alt .learn-more:hover {
+            background-color: #0171ba;
+            color: white;
+        }
     </style>
-    <title>Two Containers with Different Styles</title>
+    <title>Two Containers with Different Styles and Learn More Boxes</title>
 </head>
 <body>
 
@@ -69,6 +100,7 @@
             <li>Bullet point 1</li>
             <li>Bullet point 2</li>
         </ul>
+        <a href="#" class="learn-more">Learn more</a> <!-- Learn More button -->
     </div>
 
     <!-- Second Column -->
@@ -78,6 +110,7 @@
             <li>Bullet point 3</li>
             <li>Bullet point 4</li>
         </ul>
+        <a href="#" class="learn-more">Learn more</a> <!-- Learn More button -->
     </div>
 </section>
 
@@ -90,6 +123,7 @@
             <li>Bullet point 1</li>
             <li>Bullet point 2</li>
         </ul>
+        <a href="#" class="learn-more">Learn more</a> <!-- Learn More button -->
     </div>
 
     <!-- Second Column -->
@@ -99,6 +133,7 @@
             <li>Bullet point 3</li>
             <li>Bullet point 4</li>
         </ul>
+        <a href="#" class="learn-more">Learn more</a> <!-- Learn More button -->
     </div>
 </section>
 
