@@ -5,16 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <style>
-        .container {
+        .container, .container-alt {
             display: flex;
-            justify-content: space-between;
+            justify-content: center; /* Align the content horizontally */
+            gap: 20px; /* Add some space between columns */
             background-color: #0171ba;
             padding: 20px;
             font-family: 'Roboto', sans-serif;
+            max-width: 80%; /* Restrict the width of the container */
+            margin: 0 auto; /* Center the container */
+        }
+
+        .container-alt {
+            background-color: transparent;
         }
 
         .column {
-            width: 45%;
+            width: 45%; /* Ensure both columns are narrower */
+            max-width: 400px; /* Optional: limit the column width */
         }
 
         h2 {
@@ -54,24 +62,13 @@
             color: #0171ba;
         }
 
-        .container-alt {
-            display: flex;
-            justify-content: space-between;
-            background-color: transparent;
-            padding: 20px;
-            font-family: 'Roboto', sans-serif;
-        }
-
+        /* Styles for container-alt (transparent background) */
         .container-alt h2 {
             color: #0171ba;
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 10px;
         }
 
         .container-alt li {
             color: #0171ba;
-            font-size: 18px;
         }
 
         .container-alt .learn-more {
