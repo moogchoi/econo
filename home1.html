@@ -8,7 +8,8 @@
         .container, .container-alt {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            flex-wrap: wrap;
+            gap: 100px;
             background-color: #0171ba;
             padding: 20px;
             font-family: 'Roboto', sans-serif;
@@ -21,8 +22,10 @@
         }
 
         .column {
-            width: 45%;
+            width: calc(50% - 20px);
             max-width: 400px;
+            box-sizing: border-box;
+            padding-left: 100px;
         }
 
         h2 {
@@ -87,41 +90,54 @@
 
 <section class="container">
     <div class="column">
-        <h2>Column 1 Title</h2>
+        <h2>사업체 보험</h2>
         <ul>
-            <li>Bullet point 1</li>
-            <li>Bullet point 2</li>
+            <li>사무실 종합 보험</li>
+            <li>일반 배상 책임 보험</li>
+            <li>근로자 산재 보험</li>
+            <li>크래딧 보험</li>
+            <li>경영 책임 보험</li>
+            <li>홍수 보험</li>
         </ul>
-        <a href="#" class="learn-more">Learn more</a>
+        <a href="#" class="learn-more">더 알아보기</a>
     </div>
 
     <div class="column">
-        <h2>Column 2 Title</h2>
+        <h2>개인 보험</h2>
         <ul>
-            <li>Bullet point 3</li>
-            <li>Bullet point 4</li>
+            <li>주택 보험</li>
+            <li>자동차 보험</li>
+            <li>Umbrella 보험</li>
         </ul>
-        <a href="#" class="learn-more">Learn more</a>
+        <a href="#" class="learn-more">더 알아보기</a>
     </div>
 </section>
 
 <section class="container-alt">
     <div class="column">
-        <h2>Column 1 Title</h2>
+        <h2>업종</h2>
         <ul>
-            <li>Bullet point 1</li>
-            <li>Bullet point 2</li>
+            <li>금융 기업</li>
+            <li>도매 / 유통</li>
+            <li>식당</li>
+            <li>부동산</li>
+            <li>운송 / 물류</li>
+            <li>건설 / 공사</li>
+            <li>생명공학</li>
         </ul>
-        <a href="#" class="learn-more">Learn more</a>
+        <a href="#" class="learn-more">더 알아보기</a>
     </div>
 
     <div class="column">
-        <h2>Column 2 Title</h2>
+        <h2>그룹 건강 보험</h2>
         <ul>
-            <li>Bullet point 3</li>
-            <li>Bullet point 4</li>
+            <li>건강 보험</li>
+            <li>지상사 건강 보험</li>
+            <li>생명 / 사고 사망 및 상해</li>
+            <li>단기 / 장기 불구 보험</li>
+            <li>추가 혜택 그룹 보험</li>
         </ul>
-        <a href="#" class="learn-more">Learn more</a>
+        <a href="#" class="learn-more">더 알아보기</a>
     </div>
 </section>
 
