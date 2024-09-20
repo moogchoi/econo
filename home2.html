@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <style>
         body {
+            margin: 0;
             height: 1000vh;
         }
 
@@ -16,10 +17,10 @@
             font-family: 'Roboto', sans-serif;
             color: white;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             padding: 20px;
-            flex-direction: column;
+            box-sizing: border-box;
             z-index: 1;
         }
 
@@ -39,7 +40,28 @@
         }
 
         .title {
-            text-align: center;
+            flex: 1;
+            text-align: left;
+            align-self: center;
+            margin-left: 50px;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        .logos {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         ul {
@@ -74,6 +96,8 @@
     <div class="title">
       <h1>Our Partners</h1>
       <h2>Econo Agency offers policies from top carriers in the insurance industry</h2>
+    </div>
+    <div class="logos">
       <ul>
         <li><img src="https://raw.githubusercontent.com/moogchoi/econo/master/Images/1.png" alt="Logo 1"></li>
         <li><img src="https://raw.githubusercontent.com/moogchoi/econo/master/Images/2.png" alt="Logo 2"></li>

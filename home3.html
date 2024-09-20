@@ -5,48 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-      body {
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
-      .container {
+      body {
         font-family: 'Roboto', sans-serif;
+        background-color: #f4f7f6;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
         text-align: center;
-        padding: 20px;
+        padding: 50px 20px;
+        background-color: #fff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        max-width: 1200px;
+        margin: 40px auto;
+        border-radius: 12px;
       }
 
       h2 {
-        font-size: 42px;
+        font-size: 36px;
         font-weight: 700;
         margin-bottom: 10px;
-        color: #333;
+        color: #2c3e50;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
       }
 
       h1 {
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 400;
-        margin-bottom: 20px;
-        color: #000;
+        margin-bottom: 30px;
+        color: #34495e;
       }
 
       .logos-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
         justify-items: center;
-        padding: 5px;
-        max-width: 60%;
+        padding: 20px;
+        max-width: 80%;
         margin: 0 auto;
+        animation: fadeInUp 1s ease-in-out;
       }
 
       .logos-grid img {
-        width: 110px;
+        width: 120px;
         height: auto;
         object-fit: contain;
+        filter: grayscale(100%);
+        transition: all 0.3s ease-in-out;
       }
 
+      .logos-grid img:hover {
+        filter: grayscale(0%);
+        transform: scale(1.1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        h2 {
+          font-size: 28px;
+        }
+        h1 {
+          font-size: 18px;
+        }
+        .logos-grid img {
+          width: 100px;
+        }
+      }
     </style>
     <title>Home Page Clients</title>
 </head>

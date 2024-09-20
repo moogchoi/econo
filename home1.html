@@ -5,141 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <style>
-        .container, .container-alt {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 100px;
-            background-color: #0171ba;
-            padding: 20px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: 'Roboto', sans-serif;
-            max-width: 80%;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        /* Create a grid layout */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+            gap: 20px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        .container-alt {
-            background-color: transparent;
+        /* Standard card styling */
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            min-height: 450px; /* Uniform height */
+            text-align: center;
         }
 
-        .column {
-            width: calc(50% - 20px);
-            max-width: 400px;
-            box-sizing: border-box;
-            padding-left: 100px;
+        .card h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
         }
 
-        h2 {
-            color: white;
-            font-size: 22px;
-            margin-bottom: 10px;
-            font-size: 28px;
-            font-weight: 700;
+        .card ul {
+            list-style-type: none;
+            padding: 0;
         }
 
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 10px;
-            color: white;
-            font-size: 18px;
-        }
-
-        .learn-more {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 15px;
-            background-color: #0171ba;
-            color: white;
-            text-decoration: none;
-            border: 2px solid white;
+        .card ul li {
             font-size: 16px;
-            font-weight: bold;
-            transition: background-color 0.3s, color 0.3s;
+            margin-bottom: 10px;
         }
 
-        .learn-more:hover {
-            background-color: white;
+        /* Style each <li> to look like a box */
+        .card ul li a {
+            display: block;
+            padding: 10px;
+            background-color: #f0f0f0;
+            color: #555;
+            text-decoration: none;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            transition: border-color 0.3s, color 0.3s;
+        }
+
+        /* Hover effect: highlight border only */
+        .card ul li a:hover {
+            border-color: #0171ba;
             color: #0171ba;
         }
 
-        .container-alt h2 {
-            color: #0171ba;
+        /* 업종 card spans all 3 columns */
+        .card-wide {
+            grid-column: span 3; /* Spans across all three columns */
         }
 
-        .container-alt li {
-            color: #0171ba;
+        /* Columns for the list items inside the 업종 card */
+        .card-wide ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
         }
 
-        .container-alt .learn-more {
-            background-color: white;
-            color: #0171ba;
-            border: 2px solid #0171ba;
+        .card-wide ul li {
+            width: calc(33% - 20px); /* Make each list item take up 1/3rd of the width */
         }
 
-        .container-alt .learn-more:hover {
-            background-color: #0171ba;
-            color: white;
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr; /* Stack all cards in a single column */
+            }
+
+            .card-wide ul li {
+                width: 100%; /* Stack the list items vertically on smaller screens */
+            }
         }
     </style>
-    <title>Home Page Services</title>
+    <title>Insurance Services</title>
 </head>
 <body>
 
-<section class="container">
-    <div class="column">
+<!-- Container for all the cards -->
+<div class="container">
+    <!-- Card 1: Business Insurance -->
+    <div class="card">
         <h2>사업체 보험</h2>
         <ul>
-            <li>사무실 종합 보험</li>
-            <li>일반 배상 책임 보험</li>
-            <li>근로자 산재 보험</li>
-            <li>크래딧 보험</li>
-            <li>경영 책임 보험</li>
-            <li>홍수 보험</li>
+            <li><a href="#">사무실 종합 보험</a></li>
+            <li><a href="#">일반 배상 책임 보험</a></li>
+            <li><a href="#">근로자 산재 보험</a></li>
+            <li><a href="#">크래딧 보험</a></li>
+            <li><a href="#">경영 책임 보험</a></li>
+            <li><a href="#">홍수 보험</a></li>
         </ul>
-        <a href="#" class="learn-more">더 알아보기</a>
     </div>
 
-    <div class="column">
+    <!-- Card 2: Personal Insurance -->
+    <div class="card">
         <h2>개인 보험</h2>
         <ul>
-            <li>주택 보험</li>
-            <li>자동차 보험</li>
-            <li>Umbrella 보험</li>
+            <li><a href="#">주택 보험</a></li>
+            <li><a href="#">자동차 보험</a></li>
+            <li><a href="#">Umbrella 보험</a></li>
         </ul>
-        <a href="#" class="learn-more">더 알아보기</a>
-    </div>
-</section>
-
-<section class="container-alt">
-    <div class="column">
-        <h2>업종</h2>
-        <ul>
-            <li>금융 기업</li>
-            <li>도매 / 유통</li>
-            <li>식당</li>
-            <li>부동산</li>
-            <li>운송 / 물류</li>
-            <li>건설 / 공사</li>
-            <li>생명공학</li>
-        </ul>
-        <a href="#" class="learn-more">더 알아보기</a>
     </div>
 
-    <div class="column">
+    <!-- Card 3: Group Health Insurance -->
+    <div class="card">
         <h2>그룹 건강 보험</h2>
         <ul>
-            <li>건강 보험</li>
-            <li>지상사 건강 보험</li>
-            <li>생명 / 사고 사망 및 상해</li>
-            <li>단기 / 장기 불구 보험</li>
-            <li>추가 혜택 그룹 보험</li>
+            <li><a href="#">건강 보험</a></li>
+            <li><a href="#">지상사 건강 보험</a></li>
+            <li><a href="#">생명 / 사고 사망 및 상해</a></li>
+            <li><a href="#">단기 / 장기 불구 보험</a></li>
+            <li><a href="#">추가 혜택 그룹 보험</a></li>
         </ul>
-        <a href="#" class="learn-more">더 알아보기</a>
     </div>
-</section>
+
+    <!-- Card 4: Industry Insurance (업종) -->
+    <div class="card card-wide">
+        <h2>업종</h2>
+        <ul>
+            <li><a href="#">금융 기업</a></li>
+            <li><a href="#">도매 / 유통</a></li>
+            <li><a href="#">식당</a></li>
+            <li><a href="#">부동산</a></li>
+            <li><a href="#">운송 / 물류</a></li>
+            <li><a href="#">건설 / 공사</a></li>
+            <li><a href="#">생명공학</a></li>
+        </ul>
+    </div>
+</div>
 
 </body>
 </html>
