@@ -466,6 +466,10 @@
         track1.style.transform = 'translateX(' + (-slideWidth1 * currentIndex1) + 'px)';
     });
 
+    setInterval(() => {
+        nextBtn1.click();
+    }, 3000);
+
     // Second Carousel Controls
     const track2 = document.getElementById('carouselTrack2');
     const prevBtn2 = document.getElementById('prevBtn2');
@@ -489,6 +493,10 @@
         }
         track2.style.transform = 'translateX(' + (-slideWidth2 * currentIndex2) + 'px)';
     });
+
+    setInterval(() => {
+        prevBtn2.click();
+    }, 3000);
 </script>
 
 
@@ -547,6 +555,11 @@
                 carouselTrack3.style.transform = `translateX(-${currentSlide3 * 160}px)`;
             }
         });
+
+        setInterval(() => {
+            nextBtn3.click();
+        }, 3000);
+
 
     </script>
 
